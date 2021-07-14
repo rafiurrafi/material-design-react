@@ -1,6 +1,12 @@
 import React from "react";
+import "./app.css";
+import UnderstandingBreakpoints from "./components/understandingBreakpoints";
 const App = () => {
-  return <h1>Hello from App</h1>;
+  return (
+    <div>
+      <UnderstandingBreakpoints />
+    </div>
+  );
 };
 
 export default App;
