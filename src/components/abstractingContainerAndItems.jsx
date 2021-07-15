@@ -24,7 +24,9 @@ const AbstractingContainerAndItems = (props) => {
         <Paper className={classes.paper}>Paper item</Paper>
       </Item>
       <Item>
-        <Paper className={classes.paper}>Paper item</Paper>
+        <Paper xs={12} sm={6} md={10} className={classes.paper}>
+          Paper item
+        </Paper>
       </Item>
       <Item>
         <Paper className={classes.paper}>Paper item</Paper>
