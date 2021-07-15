@@ -18,31 +18,31 @@ const Container = (props) => <Grid container {...props} />;
 const Item = (props) => <Grid item {...props} />;
 
 const FixedColumnLayout = (props) => {
-  const { classes } = props;
+  const { classes, width } = props;
   return (
     <Container spacing={3}>
-      <Item xs={3}>
+      <Item xs={12}>
         <Paper className={classes.paper}>Auto</Paper>
       </Item>
-      <Item xs={3}>
+      <Item xs={6}>
         <Paper className={classes.paper}>Auto</Paper>
       </Item>
-      <Item xs={3}>
+      <Item xs={6}>
         <Paper className={classes.paper}>Auto</Paper>
       </Item>
-      <Item xs={3}>
+      <Item xs={6}>
         <Paper className={classes.paper}>Auto</Paper>
       </Item>
-      <Item xs={3}>
+      <Item xs={6}>
         <Paper className={classes.paper}>Auto</Paper>
       </Item>
-      <Item xs={3}>
+      <Item xs={6}>
         <Paper className={classes.paper}>Auto</Paper>
       </Item>
-      <Item xs={3}>
+      <Item xs={6}>
         <Paper className={classes.paper}>Auto</Paper>
       </Item>
-      <Item xs={3}>
+      <Item xs={12}>
         <Paper className={classes.paper}>Auto</Paper>
       </Item>
     </Container>
