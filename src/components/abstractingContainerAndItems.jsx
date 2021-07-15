@@ -14,22 +14,22 @@ const styles = (theme) => ({
 });
 
 const Container = (props) => <Grid container {...props} />;
-const Item = (props) => <Grid item {...props} />;
+const Item = (props) => <Grid item xs={12} sm={6} md={3} {...props} />;
 
 const AbstractingContainerAndItems = (props) => {
   const { classes } = props;
   return (
     <Container spacing={3}>
-      <Item xs={12} sm={6} md={3}>
+      <Item>
         <Paper className={classes.paper}>Paper item</Paper>
       </Item>
-      <Item xs={12} sm={6} md={3}>
+      <Item>
         <Paper className={classes.paper}>Paper item</Paper>
       </Item>
-      <Item xs={12} sm={6} md={3}>
+      <Item>
         <Paper className={classes.paper}>Paper item</Paper>
       </Item>
-      <Item xs={12} sm={6} md={3}>
+      <Item>
         <Paper className={classes.paper}>Paper item</Paper>
       </Item>
     </Container>
