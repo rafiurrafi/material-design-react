@@ -21,18 +21,16 @@ const AbstractingContainerAndItems = (props) => {
   return (
     <Container spacing={3}>
       <Item>
-        <Paper className={classes.paper}>Paper item</Paper>
+        <Paper className={classes.paper}>Paper</Paper>
       </Item>
       <Item>
-        <Paper xs={12} sm={6} md={10} className={classes.paper}>
-          Paper item
-        </Paper>
+        <Paper className={classes.paper}>Paper</Paper>
       </Item>
       <Item>
-        <Paper className={classes.paper}>Paper item</Paper>
+        <Paper className={classes.paper}>Paper</Paper>
       </Item>
       <Item>
-        <Paper className={classes.paper}>Paper item</Paper>
+        <Paper className={classes.paper}>Paper</Paper>
       </Item>
     </Container>
   );
