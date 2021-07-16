@@ -1,11 +1,11 @@
 import React from "react";
 import "./app.css";
-import FixedColumnLayout from "./components/fixedColumnLayout";
+import FixedAppbar from "./components/fixedAppbar";
 
 const App = () => {
   return (
     <div>
-      <FixedColumnLayout />
+      <FixedAppbar />
     </div>
   );
 };

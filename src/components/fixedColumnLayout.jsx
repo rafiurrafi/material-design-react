@@ -18,7 +18,7 @@ const Container = (props) => <Grid container {...props} />;
 const Item = (props) => <Grid item {...props} />;
 
 const FixedColumnLayout = (props) => {
-  const { classes, width } = props;
+  const { classes } = props;
   return (
     <Container spacing={2}>
       <Item xs={6}>
