@@ -1,11 +1,11 @@
 import React from "react";
 import "./app.css";
-import FixedColumnLayout from "./components/fixedColumnLayout";
+import UnderstandingBreakpoints from "./components/understandingBreakpoints";
 
 const App = () => {
   return (
     <div>
-      <FixedColumnLayout />
+      <UnderstandingBreakpoints />
     </div>
   );
 };

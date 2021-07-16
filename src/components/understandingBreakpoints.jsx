@@ -14,22 +14,20 @@ const styles = (theme) => ({
 const UnderstandingBreakpoints = (props) => {
   const { classes } = props;
   return (
-    <div>
-      <Grid container spacing={4}>
-        <Grid item xs={12} sm={6} md={3}>
-          <Paper className={classes.paper}>Grid item</Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Paper className={classes.paper}>Grid item</Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Paper className={classes.paper}>Grid item</Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Paper className={classes.paper}>Grid item</Paper>
-        </Grid>
+    <Grid container spacing={3}>
+      <Grid item xs={12} sm={6} md={3}>
+        <Paper className={classes.paper}>First column</Paper>
       </Grid>
-    </div>
+      <Grid item xs={12} sm={6} md={3}>
+        <Paper className={classes.paper}>First column</Paper>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3}>
+        <Paper className={classes.paper}>First column</Paper>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3}>
+        <Paper className={classes.paper}>First column</Paper>
+      </Grid>
+    </Grid>
   );
 };
 
