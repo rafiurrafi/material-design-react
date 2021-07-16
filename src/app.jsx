@@ -1,11 +1,11 @@
 import React from "react";
 import "./app.css";
-import AbstractingContainerAndItems from "./components/abstractingContainerAndItems";
+import FixedColumnLayout from "./components/fixedColumnLayout";
 
 const App = () => {
   return (
     <div>
-      <AbstractingContainerAndItems />
+      <FixedColumnLayout />
     </div>
   );
 };

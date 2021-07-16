@@ -20,30 +20,30 @@ const Item = (props) => <Grid item {...props} />;
 const FixedColumnLayout = (props) => {
   const { classes, width } = props;
   return (
-    <Container spacing={3}>
-      <Item xs={12}>
-        <Paper className={classes.paper}>Auto</Paper>
+    <Container spacing={2}>
+      <Item xs={6}>
+        <Paper className={classes.paper}>Paper</Paper>
       </Item>
       <Item xs={6}>
-        <Paper className={classes.paper}>Auto</Paper>
+        <Paper className={classes.paper}>Paper</Paper>
       </Item>
       <Item xs={6}>
-        <Paper className={classes.paper}>Auto</Paper>
+        <Paper className={classes.paper}>Paper</Paper>
       </Item>
       <Item xs={6}>
-        <Paper className={classes.paper}>Auto</Paper>
+        <Paper className={classes.paper}>Paper</Paper>
       </Item>
       <Item xs={6}>
-        <Paper className={classes.paper}>Auto</Paper>
+        <Paper className={classes.paper}>Paper</Paper>
       </Item>
       <Item xs={6}>
-        <Paper className={classes.paper}>Auto</Paper>
+        <Paper className={classes.paper}>Paper</Paper>
       </Item>
       <Item xs={6}>
-        <Paper className={classes.paper}>Auto</Paper>
+        <Paper className={classes.paper}>Paper</Paper>
       </Item>
-      <Item xs={12}>
-        <Paper className={classes.paper}>Auto</Paper>
+      <Item xs={6}>
+        <Paper className={classes.paper}>Paper</Paper>
       </Item>
     </Container>
   );
