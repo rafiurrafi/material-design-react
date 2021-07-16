@@ -1,11 +1,11 @@
 import React from "react";
 import "./app.css";
-import UnderstandingBreakpoints from "./components/understandingBreakpoints";
+import AutoBreakpoints from "./components/autoBreakpoints";
 
 const App = () => {
   return (
     <div>
-      <UnderstandingBreakpoints />
+      <AutoBreakpoints />
     </div>
   );
 };

@@ -16,7 +16,7 @@ const styles = (theme) => ({
 });
 
 const FillingSpace = (props) => {
-  const { classes, justify } = props;
+  const { classes } = props;
   return (
     <div>
       <Grid container spacing={3}>

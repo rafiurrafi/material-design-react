@@ -15,22 +15,20 @@ const styles = (theme) => ({
 const AutoBreakpoints = (props) => {
   const { classes } = props;
   return (
-    <div>
-      <Grid container spacing={3}>
-        <Grid item xs="auto" sm="auto" md="auto">
-          <Paper className={classes.paper}>This is a red cow</Paper>
-        </Grid>
-        <Grid item xs="auto" sm="auto" md="auto">
-          <Paper className={classes.paper}>This is a red cow</Paper>
-        </Grid>
-        <Grid item xs="auto" sm="auto" md="auto">
-          <Paper className={classes.paper}>This is a red cow</Paper>
-        </Grid>
-        <Grid item xs="auto" sm="auto" md="auto">
-          <Paper className={classes.paper}>This is a red cow</Paper>
-        </Grid>
+    <Grid container>
+      <Grid item xs="auto" sm="auto" md="auto">
+        <Paper className={classes.paper}>Paper 1</Paper>
       </Grid>
-    </div>
+      <Grid item xs="auto" sm="auto" md="auto">
+        <Paper className={classes.paper}>Paper 1</Paper>
+      </Grid>
+      <Grid item xs="auto" sm="auto" md="auto">
+        <Paper className={classes.paper}>Paper 1</Paper>
+      </Grid>
+      <Grid item xs="auto" sm="auto" md="auto">
+        <Paper className={classes.paper}>Paper 1</Paper>
+      </Grid>
+    </Grid>
   );
 };
 
