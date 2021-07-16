@@ -1,11 +1,11 @@
 import React from "react";
 import "./app.css";
-import AutoBreakpoints from "./components/autoBreakpoints";
+import FillingSpace from "./components/fillingSpace";
 
 const App = () => {
   return (
     <div>
-      <AutoBreakpoints />
+      <FillingSpace />
     </div>
   );
 };

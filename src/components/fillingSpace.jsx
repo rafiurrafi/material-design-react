@@ -18,70 +18,68 @@ const styles = (theme) => ({
 const FillingSpace = (props) => {
   const { classes } = props;
   return (
-    <div>
-      <Grid container spacing={3}>
-        <Grid item xs={12} sm={6} md={3}>
-          <Paper className={classes.paper}>
-            <Grid container justify="space-between">
-              <Grid item>
-                <Chip label="xs = 3" />
-              </Grid>
-              <Grid item>
-                <Chip label="xs = 3" />
-              </Grid>
-              <Grid item>
-                <Chip label="xs = 3" />
-              </Grid>
+    <Grid container spacing={3}>
+      <Grid item xs={12} sm={6} md={3}>
+        <Paper className={classes.paper}>
+          <Grid container justify="center">
+            <Grid item xs="auto" sm="auto" md="auto">
+              <Chip label="Chip" />
             </Grid>
-          </Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Paper className={classes.paper}>
-            <Grid container justify="space-between">
-              <Grid item>
-                <Chip label="xs = 3" />
-              </Grid>
-              <Grid item>
-                <Chip label="xs = 3" />
-              </Grid>
-              <Grid item>
-                <Chip label="xs = 3" />
-              </Grid>
+            <Grid item xs="auto" sm="auto" md="auto">
+              <Chip label="Chip" />
             </Grid>
-          </Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Paper className={classes.paper}>
-            <Grid container justify="space-between">
-              <Grid item>
-                <Chip label="xs = 3" />
-              </Grid>
-              <Grid item>
-                <Chip label="xs = 3" />
-              </Grid>
-              <Grid item>
-                <Chip label="xs = 3" />
-              </Grid>
+            <Grid item xs="auto" sm="auto" md="auto">
+              <Chip label="Chip" />
             </Grid>
-          </Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Paper className={classes.paper}>
-            <Grid container justify="space-between">
-              <Grid item>
-                <Chip label="xs = 3" />
-              </Grid>
-              <Grid item>
-                <Chip label="xs = 3" />
-              </Grid>
-              <Grid item>
-                <Chip label="xs = 3" />
-              </Grid>
-            </Grid>
-          </Paper>
-        </Grid>
+          </Grid>
+        </Paper>
       </Grid>
-    </div>
+      <Grid item xs={12} sm={6} md={3}>
+        <Paper className={classes.paper}>
+          <Grid container justify="center">
+            <Grid item xs="auto" sm="auto" md="auto">
+              <Chip label="Chip" />
+            </Grid>
+            <Grid item xs="auto" sm="auto" md="auto">
+              <Chip label="Chip" />
+            </Grid>
+            <Grid item xs="auto" sm="auto" md="auto">
+              <Chip label="Chip" />
+            </Grid>
+          </Grid>
+        </Paper>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3}>
+        <Paper className={classes.paper}>
+          <Grid container justify="center">
+            <Grid item xs="auto" sm="auto" md="auto">
+              <Chip label="Chip" />
+            </Grid>
+            <Grid item xs="auto" sm="auto" md="auto">
+              <Chip label="Chip" />
+            </Grid>
+            <Grid item xs="auto" sm="auto" md="auto">
+              <Chip label="Chip" />
+            </Grid>
+          </Grid>
+        </Paper>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3}>
+        <Paper className={classes.paper}>
+          <Grid container justify="center">
+            <Grid item xs="auto" sm="auto" md="auto">
+              <Chip label="Chip" />
+            </Grid>
+            <Grid item xs="auto" sm="auto" md="auto">
+              <Chip label="Chip" />
+            </Grid>
+            <Grid item xs="auto" sm="auto" md="auto">
+              <Chip label="Chip" />
+            </Grid>
+          </Grid>
+        </Paper>
+      </Grid>
+    </Grid>
   );
 };
 
