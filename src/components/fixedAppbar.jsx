@@ -17,6 +17,7 @@ const styles = (theme) => ({
     marginLeft: -12,
     marginRight: 20,
   },
+  toolbarMargin: theme.mixins.toolbar,
 });
 
 const FixedAppbar = (props) => {
@@ -38,6 +39,7 @@ const FixedAppbar = (props) => {
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
+      <div className={classes.toolbarMargin} />
       {new Array(500).fill(null).map((v, i) => (
         <li key={i}>{i}</li>
       ))}
