@@ -23,6 +23,19 @@ const styles = (theme) => ({
     ...theme.mixins.toolbar,
   },
 });
+class ScrolledAppbar extends Component {
+  constructor(props) {
+    super();
+    this.state = {
+      scrolling: false,
+      scrollTop: 0,
+    };
+  }
+  render() {
+    return <h1>Hello</h1>;
+  }
+}
+
 const HideAppbarPage = (props) => {
   const { classes } = props;
   return (
