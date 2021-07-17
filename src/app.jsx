@@ -1,11 +1,11 @@
 import React from "react";
 import "./app.css";
-import FixedAppbar from "./components/fixedAppbar";
+import HideAppbarPage from "./components/hideAppbarPage";
 
 const App = () => {
   return (
     <div>
-      <FixedAppbar />
+      <HideAppbarPage />
     </div>
   );
 };
