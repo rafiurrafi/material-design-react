@@ -23,44 +23,47 @@ const styles = (theme) => ({
     ...theme.mixins.toolbar,
   },
 });
-class ScrolledAppbar extends Component {
-  constructor(props) {
-    super();
-    this.state = {
-      scrolling: false,
-      scrollTop: 0,
-    };
+const ScrolledAppbar = withStyles(styles)(
+  class extends Component {
+    constructor(props) {
+      super();
+      this.state = {
+        scrolling: false,
+        scrollTop: 0,
+      };
+    }
+    render() {
+      const { classes } = this.props;
+      return (
+        <Fade in={!this.state.scrolling}>
+          <AppBar position="fixed">
+            <Toolbar>
+              <IconButton
+                className={classes.menu}
+                color="inherit"
+                aria-label="Menu"
+              >
+                <MenuIcon />
+              </IconButton>
+              <Typography className={classes.flex} variant="title">
+                Title
+              </Typography>
+              <Button color="inherit" variant="text">
+                Login
+              </Button>
+            </Toolbar>
+          </AppBar>
+        </Fade>
+      );
+    }
   }
-  render() {
-    const { classes } = this.props;
-    return (
-      <Fade in={!this.state.scrolling}>
-        <AppBar position="fixed">
-          <Toolbar>
-            <IconButton
-              className={classes.menu}
-              color="inherit"
-              aria-label="Menu"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography className={classes.flex} variant="title">
-              Title
-            </Typography>
-            <Button color="inherit" variant="text">
-              Login
-            </Button>
-          </Toolbar>
-        </AppBar>
-      </Fade>
-    );
-  }
-}
+);
 
 const HideAppbarPage = (props) => {
   const { classes } = props;
   return (
     <div>
+      <ScrolledAppbar />
       <div className={classes.toolbarMargin} />
       <ul>
         {new Array(500).fill(null).map((v, i) => (
