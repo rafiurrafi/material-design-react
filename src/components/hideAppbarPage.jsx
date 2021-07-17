@@ -34,23 +34,25 @@ class ScrolledAppbar extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <AppBar position="fixed">
-        <Toolbar>
-          <IconButton
-            className={classes.menu}
-            color="inherit"
-            aria-label="Menu"
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography className={classes.flex} variant="title">
-            Title
-          </Typography>
-          <Button color="inherit" variant="text">
-            Login
-          </Button>
-        </Toolbar>
-      </AppBar>
+      <Fade in={!this.state.scrolling}>
+        <AppBar position="fixed">
+          <Toolbar>
+            <IconButton
+              className={classes.menu}
+              color="inherit"
+              aria-label="Menu"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Typography className={classes.flex} variant="title">
+              Title
+            </Typography>
+            <Button color="inherit" variant="text">
+              Login
+            </Button>
+          </Toolbar>
+        </AppBar>
+      </Fade>
     );
   }
 }
@@ -59,7 +61,6 @@ const HideAppbarPage = (props) => {
   const { classes } = props;
   return (
     <div>
-      withStyles(styles)( ScrolledAppbar )
       <div className={classes.toolbarMargin} />
       <ul>
         {new Array(500).fill(null).map((v, i) => (
