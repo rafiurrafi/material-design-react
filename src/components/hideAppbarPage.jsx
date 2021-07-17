@@ -39,6 +39,15 @@ const ScrolledAppbar = withStyles(styles)(
         scrolling: e.target.documentElement.scrollTop > state.scrollTop,
       }));
     }
+    shouldComponentUpdate(nextProps, nextState) {
+      return this.state.scrolling !== nextState.scrolling;
+    }
+    componentDidMount() {
+      window.addEventListener("scroll", this.onScroll);
+    }
+    componentWillUnmount() {
+      window.removeEventListener("scroll", this.onScroll);
+    }
     render() {
       const { classes } = this.props;
       return (
