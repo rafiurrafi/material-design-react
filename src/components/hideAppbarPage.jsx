@@ -32,14 +32,8 @@ class ScrolledAppbar extends Component {
     };
   }
   render() {
-    return <h1>Hello</h1>;
-  }
-}
-
-const HideAppbarPage = (props) => {
-  const { classes } = props;
-  return (
-    <div>
+    const { classes } = this.props;
+    return (
       <AppBar position="fixed">
         <Toolbar>
           <IconButton
@@ -57,6 +51,15 @@ const HideAppbarPage = (props) => {
           </Button>
         </Toolbar>
       </AppBar>
+    );
+  }
+}
+
+const HideAppbarPage = (props) => {
+  const { classes } = props;
+  return (
+    <div>
+      withStyles(styles)( ScrolledAppbar )
       <div className={classes.toolbarMargin} />
       <ul>
         {new Array(500).fill(null).map((v, i) => (
