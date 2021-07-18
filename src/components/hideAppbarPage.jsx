@@ -8,22 +8,51 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Fade from "@material-ui/core/Fade";
 
+const styles = (theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  menu: {
+    marginLeft: -12,
+    marginRight: 20,
+  },
+  flex: {
+    flex: 1,
+  },
+  toolbarMargin: {
+    ...theme.mixins.toolbar,
+  },
+});
+
 const HideAppbarPage = (props) => {
+  const { classes } = props;
   return (
-    <div>
-      <AppBar>
+    <div className={classes.root}>
+      <AppBar position="fixed">
         <Toolbar>
-          <IconButton color="inherit" aria-label="Menu">
+          <IconButton
+            className={classes.menu}
+            color="inherit"
+            aria-label="Menu"
+          >
             <MenuIcon />
           </IconButton>
-          <Typography variant="title">App</Typography>
+          <Typography className={classes.flex} variant="title">
+            App
+          </Typography>
           <Button variant="text" color="inherit">
             Login
           </Button>
         </Toolbar>
       </AppBar>
+      <div className={classes.toolbarMargin} />
+      <ul>
+        {new Array(500).fill(null).map((v, i) => (
+          <li key={i}>{i}</li>
+        ))}
+      </ul>
     </div>
   );
 };
 
-export default HideAppbarPage;
+export default withStyles(styles)(HideAppbarPage);
