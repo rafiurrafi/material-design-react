@@ -24,6 +24,21 @@ const styles = (theme) => ({
   },
 });
 
+const scrolledAppbar = withStyles(styles)(
+  class extends Component {
+    constructor() {
+      super();
+      this.state = {
+        scrolling: false,
+        scrollTop: 0,
+      };
+    }
+    render() {
+      return "hi";
+    }
+  }
+);
+
 const HideAppbarPage = (props) => {
   const { classes } = props;
   return (
