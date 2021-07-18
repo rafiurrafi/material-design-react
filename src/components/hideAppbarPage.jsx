@@ -6,7 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-import Fade from "@material-ui/core/Fade";
+import Grow from "@material-ui/core/Grow";
 
 const styles = (theme) => ({
   root: {
@@ -52,7 +52,7 @@ const ScrolledAppbar = withStyles(styles)(
     render() {
       const { classes } = this.props;
       return (
-        <Fade in={!this.state.scrolling}>
+        <Grow in={!this.state.scrolling}>
           <AppBar position="fixed">
             <Toolbar>
               <IconButton
@@ -70,7 +70,7 @@ const ScrolledAppbar = withStyles(styles)(
               </Button>
             </Toolbar>
           </AppBar>
-        </Fade>
+        </Grow>
       );
     }
   }
