@@ -32,27 +32,45 @@ const ScrolledAppbar = withStyles(styles)(
         scrolling: false,
         scrollTop: 0,
       };
+      this.onScroll = this.onScroll.bind(this);
+    }
+    onScroll(e) {
+      this.setState((state) => ({
+        scrollTop: e.target.documentElement.scrollTop,
+        scrolling: e.target.documentElement.scrollTop > state.scrollTop,
+      }));
+    }
+    shouldComponentUpdate(nextProps, nextState) {
+      return this.state.scrolling !== nextState.scrolling;
+    }
+    componentDidMount() {
+      window.addEventListener("scroll", this.onScroll);
+    }
+    componentWillUnmount() {
+      window.removeEventListener("scroll", this.onScroll);
     }
     render() {
       const { classes } = this.props;
       return (
-        <AppBar position="fixed">
-          <Toolbar>
-            <IconButton
-              className={classes.menu}
-              color="inherit"
-              aria-label="Menu"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography className={classes.flex} variant="title">
-              App
-            </Typography>
-            <Button variant="text" color="inherit">
-              Login
-            </Button>
-          </Toolbar>
-        </AppBar>
+        <Fade in={!this.state.scrolling}>
+          <AppBar position="fixed">
+            <Toolbar>
+              <IconButton
+                className={classes.menu}
+                color="inherit"
+                aria-label="Menu"
+              >
+                <MenuIcon />
+              </IconButton>
+              <Typography className={classes.flex} variant="title">
+                App
+              </Typography>
+              <Button variant="text" color="inherit">
+                Login
+              </Button>
+            </Toolbar>
+          </AppBar>
+        </Fade>
       );
     }
   }
