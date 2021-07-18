@@ -24,7 +24,7 @@ const styles = (theme) => ({
   },
 });
 
-const scrolledAppbar = withStyles(styles)(
+const ScrolledAppbar = withStyles(styles)(
   class extends Component {
     constructor() {
       super();
@@ -34,7 +34,26 @@ const scrolledAppbar = withStyles(styles)(
       };
     }
     render() {
-      return "hi";
+      const { classes } = this.props;
+      return (
+        <AppBar position="fixed">
+          <Toolbar>
+            <IconButton
+              className={classes.menu}
+              color="inherit"
+              aria-label="Menu"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Typography className={classes.flex} variant="title">
+              App
+            </Typography>
+            <Button variant="text" color="inherit">
+              Login
+            </Button>
+          </Toolbar>
+        </AppBar>
+      );
     }
   }
 );
@@ -43,23 +62,7 @@ const HideAppbarPage = (props) => {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="fixed">
-        <Toolbar>
-          <IconButton
-            className={classes.menu}
-            color="inherit"
-            aria-label="Menu"
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography className={classes.flex} variant="title">
-            App
-          </Typography>
-          <Button variant="text" color="inherit">
-            Login
-          </Button>
-        </Toolbar>
-      </AppBar>
+      <ScrolledAppbar />
       <div className={classes.toolbarMargin} />
       <ul>
         {new Array(500).fill(null).map((v, i) => (
