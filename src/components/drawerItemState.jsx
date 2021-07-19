@@ -8,6 +8,9 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import Typography from "@material-ui/core/Typography";
 
+import HomeIcon from "@material-ui/icons/Home";
+import WebIcon from "@material-ui/icons/Web";
+
 const DrawerItemState = (props) => {
   return <h1>Hello</h1>;
 };
