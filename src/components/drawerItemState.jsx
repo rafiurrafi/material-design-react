@@ -26,8 +26,29 @@ const DrawerItemState = (props) => {
   };
   return (
     <Grid container justify="space-between">
-      <Grid item>{/* Show contant  */}</Grid>
-      <Grid item>{/* Drawer  */}</Grid>
+      <Grid item>
+        <Typography>{content}</Typography>
+      </Grid>
+      <Grid item>
+        <Drawer>
+          <List>
+            {items
+              .filter((item) => !item.hidden)
+              .map((item, i) => (
+                <ListItem
+                  button
+                  key={i}
+                  disabled={item.disabled}
+                  onClick={onClick(item.label)}
+                >
+                  <ListItemIcon>
+                    <ListItemText>{item.label}</ListItemText>
+                  </ListItemIcon>
+                </ListItem>
+              ))}
+          </List>
+        </Drawer>
+      </Grid>
       <Grid item>
         <Button onClick={() => setOpen(!open)}>
           {open ? "Hide" : "Close"}
