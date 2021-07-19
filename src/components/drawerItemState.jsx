@@ -15,10 +15,10 @@ const DrawerItemState = (props) => {
   const [open, setOpen] = useState(false);
   const [content, setContent] = useState("Home");
   const [items] = useState([
-    { label: "Home", icon: HomeIcon },
-    { label: "About", icon: WebIcon, disabled: true },
-    { label: "Contact", icon: WebIcon },
-    { label: "Service", icon: WebIcon, hidden: true },
+    { label: "Home", Icon: HomeIcon },
+    { label: "About", Icon: WebIcon, disabled: true },
+    { label: "Contact", Icon: WebIcon },
+    { label: "Service", Icon: WebIcon, hidden: true },
   ]);
   const onClick = (content) => {
     setOpen(false);
@@ -33,17 +33,18 @@ const DrawerItemState = (props) => {
         <Drawer>
           <List>
             {items
-              .filter((item) => !item.hidden)
-              .map((item, i) => (
+              .filter(({ hidden }) => !hidden)
+              .map(({ label, disabled, Icon }, i) => (
                 <ListItem
                   button
                   key={i}
-                  disabled={item.disabled}
-                  onClick={onClick(item.label)}
+                  disabled={disabled}
+                  onClick={onClick(label)}
                 >
                   <ListItemIcon>
-                    <ListItemText>{item.label}</ListItemText>
+                    <Icon />
                   </ListItemIcon>
+                  <ListItemText>{label}</ListItemText>
                 </ListItem>
               ))}
           </List>
