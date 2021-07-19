@@ -12,6 +12,14 @@ import HomeIcon from "@material-ui/icons/Home";
 import WebIcon from "@material-ui/icons/Web";
 
 const DrawerItemState = (props) => {
+  const [open, setOpen] = useState(false);
+  const [content, setContent] = useState("Home");
+  const [items] = useState([
+    { label: "Home", icon: HomeIcon },
+    { label: "About", icon: WebIcon, disabled: true },
+    { label: "Contact", icon: WebIcon },
+    { label: "Service", icon: WebIcon, hidden: true },
+  ]);
   return <h1>Hello</h1>;
 };
 
