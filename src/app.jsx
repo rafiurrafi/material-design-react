@@ -1,11 +1,11 @@
 import React from "react";
 import "./app.css";
-import DrawerTypes from "./components/drawerTypes";
+import DrawerItemState from "./components/drawerItemState";
 
 const App = () => {
   return (
     <div>
-      <DrawerTypes />
+      <DrawerItemState />
     </div>
   );
 };
