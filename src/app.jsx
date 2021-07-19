@@ -1,11 +1,11 @@
 import React from "react";
 import "./app.css";
-import HideAppbarPage from "./components/hideAppbarPage";
+import DrawerTypes from "./components/drawerTypes";
 
 const App = () => {
   return (
     <div>
-      <HideAppbarPage />
+      <DrawerTypes />
     </div>
   );
 };
