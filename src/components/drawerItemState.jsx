@@ -20,7 +20,22 @@ const DrawerItemState = (props) => {
     { label: "Service", Icon: WebIcon },
     { label: "Contact", Icon: WebIcon, hidden: true },
   ]);
-  return <h1>Hello</h1>;
+  const handleClickEvent = (content) => () => {
+    setOpen(false);
+    setContent(content);
+  };
+
+  return (
+    <Grid container justify="space-between">
+      <Grid item>
+        <Typography>{content}</Typography>
+      </Grid>
+      <Grid item>{/* Drawer  */}</Grid>
+      <Grid item>
+        <Button>{open ? "Hide" : "Show"} Drawer</Button>
+      </Grid>
+    </Grid>
+  );
 };
 
 export default DrawerItemState;
