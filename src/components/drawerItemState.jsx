@@ -10,3 +10,17 @@ import Typography from "@material-ui/core/Typography";
 
 import HomeIcon from "@material-ui/icons/Home";
 import WebIcon from "@material-ui/icons/Web";
+
+const DrawerItemState = (props) => {
+  const [open, setOpen] = useState(false);
+  const [content, setContent] = useState("Home");
+  const [items] = useState([
+    { label: "Home", Icon: HomeIcon },
+    { label: "About", Icon: WebIcon, disabled: true },
+    { label: "Service", Icon: WebIcon },
+    { label: "Contact", Icon: WebIcon, hidden: true },
+  ]);
+  return <h1>Hello</h1>;
+};
+
+export default DrawerItemState;
