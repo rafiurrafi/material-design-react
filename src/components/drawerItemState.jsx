@@ -30,9 +30,32 @@ const DrawerItemState = (props) => {
       <Grid item>
         <Typography>{content}</Typography>
       </Grid>
-      <Grid item>{/* Drawer  */}</Grid>
       <Grid item>
-        <Button>{open ? "Hide" : "Show"} Drawer</Button>
+        <Drawer open={open} onClose={() => setOpen(false)}>
+          <List>
+            {items
+              .filter(({ hidden }) => !hidden)
+              .map(({ label, disabled, Icon }, i) => (
+                <ListItem
+                  button
+                  key={i}
+                  disabled={disabled}
+                  onClick={handleClickEvent(label)}
+                >
+                  <ListItemIcon>
+                    {" "}
+                    <Icon />
+                  </ListItemIcon>
+                  <ListItemText>{label}</ListItemText>
+                </ListItem>
+              ))}
+          </List>
+        </Drawer>
+      </Grid>
+      <Grid item>
+        <Button onClick={() => setOpen(!open)}>
+          {open ? "Hide" : "Show"} Drawer
+        </Button>
       </Grid>
     </Grid>
   );
