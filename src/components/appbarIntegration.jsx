@@ -23,7 +23,12 @@ const AppbarIntegration = (props) => {
   return (
     <div className={classes.root}>
       <AppBar>
-        <Tabs value={value} onChange={onChange}>
+        <Tabs
+          indicatorColor="primary"
+          variant="fullWidth"
+          value={value}
+          onChange={onChange}
+        >
           <Tab label="Home" />
           <Tab label="About" />
           <Tab label="Contact" />
