@@ -30,9 +30,21 @@ const AppbarIntegration = (props) => {
         </Tabs>
       </AppBar>
       <div className={classes.toolbarMargin} />
-      <Typography component="div" className={classes.tabContent}>
-        Home
-      </Typography>
+      {value === 0 && (
+        <Typography component="div" className={classes.tabContent}>
+          Home
+        </Typography>
+      )}
+      {value === 1 && (
+        <Typography component="div" className={classes.tabContent}>
+          About
+        </Typography>
+      )}
+      {value === 2 && (
+        <Typography component="div" className={classes.tabContent}>
+          Contact
+        </Typography>
+      )}
     </div>
   );
 };
