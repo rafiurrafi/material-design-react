@@ -12,6 +12,7 @@ const styles = (theme) => ({
   tabContent: {
     padding: theme.spacing.unit * 2,
   },
+  toolbarMargin: theme.mixins.toolbar,
 });
 const AppbarIntegration = (props) => {
   const { classes } = props;
@@ -28,6 +29,10 @@ const AppbarIntegration = (props) => {
           <Tab label="Contact" />
         </Tabs>
       </AppBar>
+      <div className={classes.toolbarMargin} />
+      <Typography component="div" className={classes.tabContent}>
+        Home
+      </Typography>
     </div>
   );
 };
