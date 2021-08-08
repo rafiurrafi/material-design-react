@@ -1,11 +1,11 @@
 import React from "react";
 import "./app.css";
-import DrawerItemNavigation from "./components/drawerItemNavitgation";
+import AppbarIntegration from "./components/appbarIntegration";
 
 const App = () => {
   return (
     <div>
-      <DrawerItemNavigation />
+      <AppbarIntegration />
     </div>
   );
 };

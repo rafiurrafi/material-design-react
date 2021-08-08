@@ -15,7 +15,21 @@ const styles = (theme) => ({
 });
 const AppbarIntegration = (props) => {
   const { classes } = props;
-  return <div className={classes.root}></div>;
+  const [value, setValue] = useState(0);
+  const onChange = (e, value) => {
+    setValue(value);
+  };
+  return (
+    <div className={classes.root}>
+      <AppBar>
+        <Tabs value={value} onChange={onChange}>
+          <Tab label="Home" />
+          <Tab label="About" />
+          <Tab label="Contact" />
+        </Tabs>
+      </AppBar>
+    </div>
+  );
 };
 
 export default withStyles(styles)(AppbarIntegration);
