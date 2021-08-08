@@ -13,3 +13,9 @@ const styles = (theme) => ({
     padding: theme.spacing.unit * 2,
   },
 });
+const AppbarIntegration = (props) => {
+  const { classes } = props;
+  return <div className={classes.root}></div>;
+};
+
+export default withStyles(styles)(AppbarIntegration);
