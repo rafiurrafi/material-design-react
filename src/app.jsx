@@ -1,12 +1,11 @@
 import React from "react";
 import "./app.css";
-import AppbarIntegration from "./components/appbarIntegration";
-import ListWithState from "./components/listWithState";
+import MainContent from "./components/mainContent";
 
 const App = () => {
   return (
     <div>
-      <ListWithState />
+      <MainContent />
     </div>
   );
 };
