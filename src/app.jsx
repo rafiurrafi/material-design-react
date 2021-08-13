@@ -1,11 +1,11 @@
 import React from "react";
 import "./app.css";
-import MainContent from "./components/mainContent";
+import CustomSnackbar from "./components/snackbar";
 
 const App = () => {
   return (
     <div>
-      <MainContent />
+      <CustomSnackbar />
     </div>
   );
 };
