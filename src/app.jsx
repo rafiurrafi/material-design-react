@@ -1,12 +1,15 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
 import "./app.css";
 import CustomSnackbar from "./components/snackbar";
 
 const App = () => {
   return (
-    <div>
-      <CustomSnackbar />
-    </div>
+    <BrowserRouter>
+      <div>
+        <CustomSnackbar />
+      </div>
+    </BrowserRouter>
   );
 };
 
