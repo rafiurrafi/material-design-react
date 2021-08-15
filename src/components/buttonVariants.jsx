@@ -17,13 +17,19 @@ const ButtonVariants = (props) => {
       spacing={2}
     >
       <Grid item>
-        <Button variant="text">Text</Button>
+        <Button variant="text" color="secondary">
+          Text
+        </Button>
       </Grid>
       <Grid item>
-        <Button variant="outlined">Text</Button>
+        <Button variant="outlined" color="secondary">
+          Text
+        </Button>
       </Grid>
       <Grid item>
-        <Button variant="contained">Text</Button>
+        <Button variant="contained" color="secondary">
+          Text
+        </Button>
       </Grid>
     </Grid>
   );
