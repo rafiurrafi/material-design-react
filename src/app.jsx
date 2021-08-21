@@ -1,9 +1,9 @@
 import React from "react";
 import "./app.css";
-import ControllingInput from "./components/controllingInput";
+import CustomMenu from "./components/customMenu";
 
 const App = () => {
-  return <ControllingInput />;
+  return <CustomMenu />;
 };
 
 export default App;
