@@ -1,9 +1,9 @@
 import React from "react";
 import "./app.css";
-import CustomMenu from "./components/customMenu";
+import ComposingMenusWithState from "./components/customMenu";
 
 const App = () => {
-  return <CustomMenu />;
+  return <ComposingMenusWithState />;
 };
 
 export default App;
