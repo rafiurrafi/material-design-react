@@ -12,6 +12,21 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const CustomMenu = (props) => {
+  const onOpen = (e) => {
+    setAnchorEl(e.currentTarget);
+  };
+  const onClose = () => {
+    setAnchorEl(null);
+  };
+  const classes = useStyles();
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [items, setItems] = useState([
+    { name: "First", onClick: onClose },
+    { name: "Second", onClick: onClose },
+    { name: "Third", onClick: onClose },
+    { name: "Fourth", onClick: onClose, disabled: true },
+  ]);
+
   return <Fragment>Hi</Fragment>;
 };
 
