@@ -27,7 +27,21 @@ const CustomMenu = (props) => {
     { name: "Fourth", onClick: onClose, disabled: true },
   ]);
 
-  return <Fragment>Hi</Fragment>;
+  return (
+    <Fragment>
+      <Button onClick={onOpen}>
+        Menu
+        <MenuIcon className={classes.rightIcon} />
+      </Button>
+      <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={onClose}>
+        {items.map((item, index) => (
+          <MenuItem key={index} onClick={item.onClick} disabled={item.disabled}>
+            {item.name}
+          </MenuItem>
+        ))}
+      </Menu>
+    </Fragment>
+  );
 };
 
 export default CustomMenu;
